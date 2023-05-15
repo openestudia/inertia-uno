@@ -1,33 +1,34 @@
 {
-    "name": "estudia/inertia-uno",
-    "description": "A Laravel package that provides easy integration of the Inertia.js with the power of Unocss and aut",
-    "type": "library",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Estudia\\InertiaUno\\InertiaUnoServiceProvider"
-            ],
-            "commands": [
-                "Estudia\\InertiaUno\\Console\\Commands\\InstallUno"
-            ]
-        }
-    },
-    "require": {
-        "php": "^7.3 || ^8.2",
-        "illuminate/console": "^8.0 || ^9.0 || ^10.10",
-        "js-phpize/js-phpize": "dev-master"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Estudia\\InertiaUno\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "ali Joder",
-            "email": "ali.masoudi.alavi@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev"
+  "name": "estudia/inertia-uno",
+  "description": "A Laravel package that provides easy integration of the Inertia.js with the power of Unocss and auto impoert",
+  "type": "library",
+  "version": "0.0.1",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Estudia\\InertiaUno\\InertiaUnoServiceProvider"
+      ],
+      "commands": [
+        "Estudia\\InertiaUno\\Console\\Commands\\InstallUno"
+      ]
+    }
+  },
+  "require": {
+    "php": "^7.3 || ^8.2",
+    "illuminate/console": "^8.0 || ^9.0 || ^10.10",
+    "js-phpize/js-phpize": "dev-master"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Estudia\\InertiaUno\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "ali Joder",
+      "email": "ali.masoudi.alavi@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
 }
