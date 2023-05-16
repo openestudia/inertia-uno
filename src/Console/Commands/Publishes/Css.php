@@ -13,6 +13,6 @@ class Css extends Command
     public function handle()
     {
         $this->comment('Publish Css');
-        passthru("php artisan vendor:publish --tag=inertia-uno-css");
+        passthru("php artisan vendor:publish --tag=inertia-uno-css --force");
     }
 }

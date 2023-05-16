@@ -14,6 +14,6 @@ class Vue extends Command
     {
 
         $this->comment('Publish Vue Files');
-        passthru("php artisan vendor:publish --tag=inertia-uno-vue");
+        passthru("php artisan vendor:publish --tag=inertia-uno-vue --force");
     }
 }

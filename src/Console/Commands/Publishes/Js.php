@@ -13,6 +13,6 @@ class Js extends Command
     public function handle()
     {
         $this->comment('Publish Js');
-        passthru("php artisan vendor:publish --tag=inertia-uno-js");
+        passthru("php artisan vendor:publish --tag=inertia-uno-js --force");
     }
 }

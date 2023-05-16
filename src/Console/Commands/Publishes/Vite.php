@@ -14,6 +14,6 @@ class Vite extends Command
     {
 
         $this->comment('Publish Vite Config File');
-        passthru("php artisan vendor:publish --tag=inertia-uno-vite");
+        passthru("php artisan vendor:publish --tag=inertia-uno-vite --force");
     }
 }

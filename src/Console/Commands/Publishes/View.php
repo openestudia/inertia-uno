@@ -13,6 +13,6 @@ class View extends Command
     public function handle()
     {
         $this->comment('Publish Views');
-        passthru("php artisan vendor:publish --tag=inertia-uno-view");
+        passthru("php artisan vendor:publish --tag=inertia-uno-view --force");
     }
 }
