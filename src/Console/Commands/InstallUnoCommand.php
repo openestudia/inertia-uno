@@ -13,71 +13,51 @@ class InstallUnoCommand extends Command
 
     public function handle()
     {
+        // install all
+        if ($this->output->confirm("Do you want to install InertiaJS?")) {
+            $this->call('inertia-uno:install:inertia');
+        }
 
+        if ($this->output->confirm("Do you want to add inertia handler to middleware?")) {
+            $this->call('inertia-uno:add:middleware');
+        }
 
-        $this->installInertia();
+        if ($this->output->confirm("Do you want to install Lodash?")) {
+            $this->call('inertia-uno:install:lodash');
+        }
 
-        $this->installLodash();
+        if ($this->output->confirm("Do you want to install UNOCSS?")) {
+            $this->call('inertia-uno:install:uno');
+        }
 
-        $this->installUno();
+        if ($this->output->confirm("Do you want to install VUE Iconify?")) {
+            $this->call('inertia-uno:install:iconify');
+        }
 
-        $this->copyFiles();
+        if ($this->output->confirm("Do you want to publish views?")) {
+            $this->call('inertia-uno:publish:view');
+        }
+
+        if ($this->output->confirm("Do you want to publish css files?")) {
+            $this->call('inertia-uno:publish:css');
+        }
+
+        if ($this->output->confirm("Do you want to publish js files?")) {
+            $this->call('inertia-uno:publish:js');
+        }
+
+        if ($this->output->confirm("Do you want to publish vue files?")) {
+            $this->call('inertia-uno:publish:vue');
+        }
+
+        if ($this->output->confirm("Do you want to update vite config file")) {
+            $this->call('inertia-uno:publish:vite');
+        }
 
         $this->info('Unocss installation and configuration completed.');
     }
 
-    function installInertia()
-    {
-        // Install inertia vue
-        $this->info('Installing inertia vue 3 ...');
-        passthru('npm install @inertiajs/vue3');
-        $this->info('Installing middleware ...');
-        passthru('php artisan inertia:middleware');
-
-        // Define the middleware class
-        $inertiaMiddleware = '\App\Http\Middleware\HandleInertiaRequests::class';
-
-        // Get the content of the Kernel.php file
-        $kernelContent = file_get_contents(app_path('Http/Kernel.php'));
-
-
-        // Find the 'web' middleware group and add the inertia middleware to the end
-        // Check if the middleware has already been added
-        if (strpos($kernelContent, $inertiaMiddleware) === false) {
-            $newContent = preg_replace(
-                "/'web' => \[(.*?)\],/s",
-                "'web' => [$1\t\t{$inertiaMiddleware},],",
-                $kernelContent,
-                1
-            );
-            file_put_contents(app_path('Http/Kernel.php'), $newContent);
-
-            $this->info('Added Inertia middleware to the web middleware group.');
-        } else {
-            $this->info('Inertia middleware has already been added to the web middleware group.');
-        }
-    }
-
-    function installLodash()
-    {
-        // Install lodash
-        $this->info('Installing lodash and plugins ...');
-        passthru('npm install lodash > /dev/null 2>&1');
-    }
-
-    function installUno()
-    {
-        // Install unocss
-        $this->info('Installing unocss and plugins ...');
-        passthru('npm install -D unocss @unocss/preset-attributify @unocss/preset-uno  @unocss/preset-typography @unocss/preset-web-fonts @unocss/preset-mini  @unocss/preset-tagify @unocss/preset-rem-to-px @unocss/transformer-variant-group @unocss/transformer-directives @unocss/transformer-compile-class @unocss/preset-wind');
-        passthru('npm install @unocss/reset');
-        $this->info('Install Auto Import...');
-        passthru('npm i -D unplugin-auto-import');
-        $this->info('Install Iconify for Vue...');
-        passthru('npm i -D @iconify/vue');
-    }
-
-    function copyFiles()
+    function publishStubs()
     {
         $stub_path = realpath(__DIR__ . "/../../../stubs") . "/";
 
