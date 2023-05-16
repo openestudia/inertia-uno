@@ -1,10 +1,10 @@
 <?php
 
-namespace Estudia\InertiaUno\Console\Commands\Publish;
+namespace Estudia\InertiaUno\Console\Commands\Publishes;
 
 use Illuminate\Console\Command;
 
-class View extends Command
+class Vue extends Command
 {
     protected $signature = 'inertia-uno:publish:vue';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Estudia\InertiaUno\Console\Commands\Publish;
+namespace Estudia\InertiaUno\Console\Commands\Publishes;
 
 use Illuminate\Console\Command;
 
