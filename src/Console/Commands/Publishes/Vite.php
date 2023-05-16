@@ -12,14 +12,8 @@ class Vite extends Command
 
     public function handle()
     {
-        $stub_path = realpath(__DIR__ . "/../../../../stubs") . "/";
 
         $this->comment('Publish Vite Config File');
-        $this->info('copy vite.config.js ...');
-        if ($this->publishes([$stub_path . 'vite.config.js' => base_path('vite.config.js')], 'vite')) {
-            $this->info('vite.config.js copied successfully');
-        } else {
-            $this->error('Failed to copy the vite.config.js');
-        }
+        passthru("php artisan vendor:publish --tag=inertia-uno-vite");
     }
 }

@@ -12,23 +12,8 @@ class Vue extends Command
 
     public function handle()
     {
-        $stub_path = realpath(__DIR__ . "/../../../../stubs") . "/";
 
         $this->comment('Publish Vue Files');
-        if ($this->publishes([
-            $stub_path . "Components" => base_path("resources/js"),
-        ], 'vue')) {
-            $this->info('Components published successfully');
-        } else {
-            $this->error('Failed to copy the Components');
-        }
-
-        if ($this->publishes([
-            $stub_path . "layouts" => base_path("resources/js"),
-        ], 'vue')) {
-            $this->info('layouts published successfully');
-        } else {
-            $this->error('Failed to copy the layouts');
-        }
+        passthru("php artisan vendor:publish --tag=inertia-uno-vue");
     }
 }
