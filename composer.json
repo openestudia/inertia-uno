@@ -16,7 +16,7 @@
   "require": {
     "php": "^7.3 || ^8.2",
     "illuminate/console": "^8.0 || ^9.0 || ^10.10",
-    "js-phpize/js-phpize": "dev-master"
+    "js-phpize/js-phpize": "^2.0 || ^2.9"
   },
   "license": "MIT",
   "autoload": {

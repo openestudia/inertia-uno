@@ -36,8 +36,6 @@ class InertiaUnoServiceProvider extends ServiceProvider
                 GenerateVueI18nCommand::class,
             ]);
         }
-        if ($this->app->runningInConsole()) {
-        }
 
         $this->publishes([
             __DIR__ . '/config/inertia-uno.php' => config_path('inertia-uno.php'),
