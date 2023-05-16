@@ -45,5 +45,30 @@ class InertiaUnoServiceProvider extends ServiceProvider
             __DIR__ . '/config/inertia-uno.php',
             'inertia-uno'
         );
+
+        $this->publishes([
+            __DIR__ . '/../stubs/app.blade.php' => resource_path('views/app.blade.php'),
+        ], 'inertia-uno-view');
+        $this->publishes([
+            __DIR__ . '/../stubs/app.css' => resource_path('css/app.css'),
+        ], 'inertia-uno-css');
+        $this->publishes([
+            __DIR__ . '/../stubs/vite.config.js' => base_path('vite.config.js'),
+
+        ], 'inertia-uno-vite');
+        $this->publishes([
+            __DIR__ . '/../stubs/Components' => base_path("resources/js"),
+            __DIR__ . '/../stubs/layouts' => base_path("resources/js"),
+            __DIR__ . '/../stubs/Pages' => base_path("resources/js"),
+
+        ], 'inertia-uno-vue');
+        $this->publishes([
+            __DIR__ . '/../stubs/app.js' => resource_path('css/app.js'),
+            __DIR__ . '/../stubs/autoimport.plugin.js' => resource_path('js/autoimport.plugin.js'),
+            __DIR__ . '/../stubs/inertiauno.plugin.js' => resource_path('js/inertiauno.plugin.js'),
+            __DIR__ . '/../stubs/layout.plugin.js' => resource_path('js/layout.plugin.js'),
+            __DIR__ . '/../stubs/uno.config.js' => base_path('uno.config.js'),
+            __DIR__ . '/../stubs/tailwind.config.js' => base_path('tailwind.config.js'),
+        ], 'inertia-uno-js');
     }
 }
