@@ -13,10 +13,6 @@ class Css extends Command
     public function handle()
     {
         $this->comment('Publish Css');
-        if ($this->publish('stubs/app.css', resource_path('css/app.css'), 'css')) {
-            $this->info('Publish Css files successfully');
-        } else {
-            $this->error('Failed to publish Css files');
-        }
+        passthru("php artisan vendor:publish --tag=inertia-uno-css");
     }
 }
