@@ -1,6 +1,6 @@
 {
   "name": "estudia/inertia-uno",
-  "description": "A Laravel package that provides easy integration of the Inertia.js with the power of Unocss and auto impoert",
+  "description": "A Laravel package that provides easy integration of the Inertia.js with the power of Unocss and auto import",
   "type": "library",
   "version": "0.0.1",
   "extra": {
