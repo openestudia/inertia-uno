@@ -68,7 +68,7 @@ class InertiaUnoServiceProvider extends ServiceProvider
             __DIR__ . '/../stubs/inertiauno.plugin.js' => resource_path('js/inertiauno.plugin.js'),
             __DIR__ . '/../stubs/layout.plugin.js' => resource_path('js/layout.plugin.js'),
             __DIR__ . '/../stubs/uno.config.js' => base_path('uno.config.js'),
-            __DIR__ . '/../stubs/tailwind.config.js' => base_path('tailwind.config.js'),
+            __DIR__ . '/../stubs/tailwind.config.js' => base_path('tailwind.config.cjs'),
         ], 'inertia-uno-js');
     }
 }

@@ -17,9 +17,12 @@ class InstallUnoCommand extends Command
         if ($this->output->confirm("Do you want to install InertiaJS?")) {
             $this->call('inertia-uno:install:inertia');
         }
-
         if ($this->output->confirm("Do you want to add inertia handler to middleware?")) {
             $this->call('inertia-uno:add:middleware');
+        }
+
+        if ($this->output->confirm("Do you want to install VueI18n?")) {
+            $this->call('vue-i18n:generate');
         }
 
         if ($this->output->confirm("Do you want to install Lodash?")) {
@@ -53,6 +56,8 @@ class InstallUnoCommand extends Command
         if ($this->output->confirm("Do you want to update vite config file")) {
             $this->call('inertia-uno:publish:vite');
         }
+
+
 
         $this->info('Unocss installation and configuration completed.');
     }

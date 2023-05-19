@@ -1,6 +1,8 @@
+//  uncomment these lines to eneable vuei18n
+/**
 import { createI18n } from 'vue-i18n';
 import localeMessages from './vue-i18n-locales.generated';
-
+ */
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import autoimportComponent from './autoimport.plugin';
