@@ -19,6 +19,8 @@ class InstallInertia extends Command
     {
         $this->comment('Installing inertia vue 3 ...');
         passthru('npm install @inertiajs/vue3');
+        $this->comment('Installing Inertia-laravel ...');
+        passthru('composer require inertiajs/inertia-laravel');
         $this->comment('Installing middleware ...');
         passthru('php artisan inertia:middleware');
     }
