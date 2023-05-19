@@ -3,9 +3,11 @@
 namespace Estudia\InertiaUno\Console\Commands\Publishes;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Traits\Macroable;
 
 class Vite extends Command
 {
+    use Macroable;
     protected $signature = 'inertia-uno:publish:vite';
 
     protected $description = 'Publish vite.config.js ';
