@@ -68,7 +68,7 @@ class GenerateVueI18nCommand extends Command
 
 
         $jsFile = $this->getFileName($fileName);
-        // dd($jsFile);
+        dd($jsFile);
         file_put_contents($jsFile, $data, FILE_APPEND | LOCK_EX);
 
         if ($config['showOutputMessages']) {
