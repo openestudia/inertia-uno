@@ -63,7 +63,7 @@ class InertiaUnoServiceProvider extends ServiceProvider
 
         ], 'inertia-uno-vue');
         $this->publishes([
-            __DIR__ . '/../stubs/app.js' => resource_path('css/app.js'),
+            __DIR__ . '/../stubs/app.js' => resource_path('js/app.js'),
             __DIR__ . '/../stubs/autoimport.plugin.js' => resource_path('js/autoimport.plugin.js'),
             __DIR__ . '/../stubs/inertiauno.plugin.js' => resource_path('js/inertiauno.plugin.js'),
             __DIR__ . '/../stubs/layout.plugin.js' => resource_path('js/layout.plugin.js'),
