@@ -57,9 +57,9 @@ class InertiaUnoServiceProvider extends ServiceProvider
 
         ], 'inertia-uno-vite');
         $this->publishes([
-            __DIR__ . '/../stubs/Components' => base_path("resources/js"),
-            __DIR__ . '/../stubs/layouts' => base_path("resources/js"),
-            __DIR__ . '/../stubs/Pages' => base_path("resources/js"),
+            __DIR__ . '/../stubs/Components' => resource_path("js/Components"),
+            __DIR__ . '/../stubs/layouts' => resource_path("js/layouts"),
+            __DIR__ . '/../stubs/Pages' => resource_path("js/Pages"),
 
         ], 'inertia-uno-vue');
         $this->publishes([
