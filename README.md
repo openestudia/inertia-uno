@@ -98,28 +98,27 @@ To demonstrate how to implement InertiaUno in a Laravel project, follow these st
 
 6. **Composable Auto Importing**: When you use a composable structure, InertiaUno automatically imports the associated file. In the example above, it loads `resources/js/Composables/useModel.js` using the `useModel` composable.
 
-To demonstrate the composable auto-importing feature, consider the following example code:
+   To demonstrate the composable auto-importing feature, consider the following example code:
 
-```javascript
-import { computed } from 'vue';
-import { usePage } from '@inertiajs/vue3';
+   ```javascript
+   import { computed } from 'vue';
+   import { usePage } from '@inertiajs/vue3';
 
-export default function useModel() {
-  const page = usePage();
+   export default function useModel() {
+     const page = usePage();
 
-  const model = computed(() => page.props.model);
+     const model = computed(() => page.props.model);
 
-  async function get() {
-    // Perform additional asynchronous work if needed
-  }
+     async function get() {
+       // Perform additional asynchronous work if needed
+     }
 
-  return { get, model };
-}
-```
+     return { get, model };
+   }
+   ```
 
-In this example, the `useModel` composable is defined in the `resources/js/useModel.js` file. It uses Vue Composition API functions like computed and the `usePage` composable from `@inertiajs/vue3` to access the page's props and retrieve the model property. It also includes an asynchronous get function that you can use to perform additional asynchronous work if needed.
-
-When you use the useModel composable in your Vue file, InertiaUno automatically imports the `useModel.js` file, making it available for use in your application.
+   In this example, the `useModel` composable is defined in the `resources/js/useModel.js` file. It uses Vue Composition API functions like computed and the `usePage` composable from `@inertiajs/vue3` to access the page's props and retrieve the model property. It also includes an asynchronous get function that you can use to perform additional asynchronous work if needed.
+   When you use the `useModel` composable in your Vue file, InertiaUno automatically imports the `useModel.js` file, making it available for use in your application.
 
 7. **UnoCSS Feature**: InertiaUno integrates with UnoCSS, a utility-first CSS framework. Here's an example of a nice ui-card component using Tailwind CSS features:
 
