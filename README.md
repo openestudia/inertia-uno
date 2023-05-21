@@ -94,8 +94,9 @@ To demonstrate how to implement InertiaUno in a Laravel project, follow these st
    ```
 
    In this example, the `main.vue` layout file defines a layout structure for your Vue components. It uses Uno CSS classes(like tailwind) to style the elements. The layout consists of a header, a main content area with a container for the content, and a footer. The `<slot></slot>` element allows your Vue components to be inserted dynamically into the layout's main content area.
+   When you specify `layout="main"` in template tag of your your Vue page file, InertiaUno will automatically import the `resources/js/main.vue` layout file, providing the structure and styling defined in the layout. This allows you to maintain a consistent layout across multiple pages or components.
 
-When you specify layout="main" in your Vue file, InertiaUno will automatically import the main.vue layout file, providing the structure and styling defined in the layout. This allows you to maintain a consistent layout across multiple pages or components. 6. **Composable Auto Importing**: When you use a composable structure, InertiaUno automatically imports the associated file. In the example above, it loads `resources/js/Composables/useModel.js` using the `useModel` composable.
+6. **Composable Auto Importing**: When you use a composable structure, InertiaUno automatically imports the associated file. In the example above, it loads `resources/js/Composables/useModel.js` using the `useModel` composable.
 
 To demonstrate the composable auto-importing feature, consider the following example code:
 
