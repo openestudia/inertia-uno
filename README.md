@@ -179,8 +179,19 @@ InertiaUno utilizes the following technologies:
 - [Inertia.js](https://inertiajs.com): A modern approach to building single-page applications using server-side routing.
 - [UnoCSS](https://unocss.dev): A utility-first CSS framework for rapid UI development.
 - [VUE Iconify](https://iconify.design): A collection of high-quality open-source icons for Vue.js.
+- [Vue I18n@9](https://kazupon.github.io/vue-i18n/): An internationalization plugin for Vue.js applications.
 - [Lodash](https://lodash.com): A JavaScript utility library for manipulating, sorting, and filtering arrays and objects.
 - [Vite](https://vitejs.dev): A fast build tool and development server for modern web applications.
+
+## Roadmap
+
+Our planned roadmap for InertiaUno includes the following features:
+
+- [ ] UI Kit: We plan to create a UI kit of common components and layouts to help developers get started quickly with Inertia.js.
+- [ ] Predefined Layouts: We also plan to provide predefined layouts for commonly used pages, such as login, registration, and dashboard.
+- [ ] Composables: In addition to `useModel`, we plan to create more composable functions that developers can use to fetch data, handle forms, and perform other common tasks.
+
+We welcome contributions and feedback from the community to help improve InertiaUno and make it even better!
 
 ## Contributing
 
