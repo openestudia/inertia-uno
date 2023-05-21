@@ -1,6 +1,6 @@
 # InertiaUno
 
-InertiaUno is a Laravel package that provides frontend features and integrates Unocss into your Laravel project. It simplifies the process of installing InertiaJS, adding middleware, installing Lodash, and integrating UNOCSS and VUE Iconify. It also offers commands to publish views, CSS files, JS files, and Vue files.
+InertiaUno is a fancy Laravel package that provides frontend features and integrates Unocss into your Laravel project. It simplifies the process of installing InertiaJS, adding middleware, installing Lodash, and integrating UNOCSS and VUE Iconify. It also offers commands to publish views, CSS files, JS files, and Vue files.
 
 ## Installation
 
