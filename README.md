@@ -61,7 +61,6 @@ To demonstrate how to implement InertiaUno in a Laravel project, follow these st
    </template>
 
    <script setup>
-   import { useModel } from '@inertiajs/inertia-vue3';
    const { model, get } = useModel();
    await get();
    </script>
