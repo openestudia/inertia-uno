@@ -49,19 +49,22 @@ class InertiaUnoServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../stubs/app.blade.php' => resource_path('views/app.blade.php'),
         ], 'inertia-uno-view');
+
         $this->publishes([
             __DIR__ . '/../stubs/app.css' => resource_path('css/app.css'),
         ], 'inertia-uno-css');
+
         $this->publishes([
             __DIR__ . '/../stubs/vite.config.js' => base_path('vite.config.js'),
 
         ], 'inertia-uno-vite');
+
         $this->publishes([
             __DIR__ . '/../stubs/Components' => resource_path("js/Components"),
             __DIR__ . '/../stubs/layouts' => resource_path("js/layouts"),
             __DIR__ . '/../stubs/Pages' => resource_path("js/Pages"),
-
         ], 'inertia-uno-vue');
+
         $this->publishes([
             __DIR__ . '/../stubs/app.js' => resource_path('js/app.js'),
             __DIR__ . '/../stubs/autoimport.plugin.js' => resource_path('js/autoimport.plugin.js'),
