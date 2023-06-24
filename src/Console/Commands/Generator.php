@@ -248,19 +248,25 @@ class Generator
     }
 
     /**
+     * Checks if a language file should be ignored.
+     *
      * @param string $noExt
-     * @return boolean
+     * @return bool
      */
     private function shouldIgnoreLangFile($noExt)
     {
         // langFiles passed by option have priority
-        if (isset($this->langFiles) && !empty($this->langFiles)) {
+        if (!empty($this->langFiles)) {
             return !in_array($noExt, $this->langFiles);
         }
 
-        return (isset($this->config['langFiles']) && !empty($this->config['langFiles']) && !in_array($noExt, $this->config['langFiles']))
-            || (isset($this->config['excludes']) && in_array($noExt, $this->config['excludes']));
+        return (
+                !empty($this->config['langFiles']) && !in_array($noExt, $this->config['langFiles'])
+            ) || (
+                !empty($this->config['excludes']) && in_array($noExt, $this->config['excludes'])
+            );
     }
+
 
     /**
      * @param array $arr
@@ -404,6 +410,6 @@ HEREDOC;
      */
     private function getES6Module($body)
     {
-        return "export default {$body}";
+        return "export default {$body};";
     }
 }
